@@ -1070,6 +1070,7 @@ $s_project_removed_user_msg = 'Successfully removed user from project.';
 
 # proj_user_delete_page.php
 $s_remove_user_sure_msg = 'Are you sure you wish to remove user "%1$s" from project "%2$s"?';
+$s_remove_user_mult_sure_msg = 'Are you sure you wish to remove user "%1$s" from project/s?';
 $s_remove_user_button = 'Remove User';
 $s_remove_all_users_sure_msg = 'Are you sure you wish to remove all the users of this project?';
 $s_remove_all_users_button = 'Remove All Users';
@@ -1077,6 +1078,8 @@ $s_remove_all_users_button = 'Remove All Users';
 # proj_user_menu_page.php
 $s_add_user_title = 'Add user to project';
 $s_add_user_button = 'Add User';
+$s_select_proj_button = 'Select Multiple Projects to Remove';
+$s_delete_proj_button = 'Remove Projects';
 $s_project_selection_title = 'Project Selection';
 $s_remove_link = 'Remove';
 $s_remove_all_link = 'Remove all';

@@ -6,8 +6,10 @@ services:
     mailhog:
         image: mailhog/mailhog:latest
         container_name: mantisbt-mailhog
+        restart: always
         ports:
-            - "8025:8025"
+            - 1025:1025
+            - 8025:8025
 
     redis:
         image: redis:alpine

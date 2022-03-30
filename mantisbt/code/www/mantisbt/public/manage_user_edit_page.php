@@ -359,6 +359,29 @@ if( $t_reset || $t_unlock || $t_delete || $t_impersonate ) {
         </tr>
         </fieldset>
         </form>
+<!--Multiple select then delete-->
+        <form id="manage-user-proj-mult-delete-form" method="post" action="manage_user_proj_mult_delete.php">
+            <fieldset>
+                <?php echo form_security_field( 'manage_user_proj_mult_delete' ) ?>
+                <input type="hidden" name="user_id" value="<?php echo $t_user['id'] ?>" />
+                <tr>
+                    <td class="category">
+                        <?php echo lang_get( 'assigned_projects_label' ) ?>
+                    </td>
+                    <td>
+                        <select id="add-user-project-id" name="mult_project_id[]" class="input-sm" multiple="multiple" size="5">
+                            <?php print_project_user_mult_list( $t_user['id'] ) ?>
+                        </select>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" class="btn btn-primary btn-sm btn-white btn-round" value="<?php echo lang_get( 'delete_proj_button' ) ?>" />
+                    </td>
+                </tr>
+            </fieldset>
+        </form>
 	</table>
 </div>
 </div>

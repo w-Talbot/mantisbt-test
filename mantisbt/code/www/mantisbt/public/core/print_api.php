@@ -1213,6 +1213,27 @@ function print_project_user_list( $p_user_id, $p_include_remove_link = true ) {
 }
 
 /**
+ * list of projects that a user is in for deleting purposes
+ * @param integer $p_user_id An user identifier.
+ * @return void
+ */
+function print_project_user_mult_list( $p_user_id ) {
+    db_param_push();
+    $t_query = 'SELECT DISTINCT p.id, p.name
+				FROM {project} p
+				LEFT JOIN {project_user_list} u
+				ON p.id=u.project_id AND u.user_id=' . db_param() . '
+				WHERE p.enabled = ' . db_param() . ' AND
+					u.user_id IS NOT NULL
+				ORDER BY p.name';
+    $t_result = db_query( $t_query, array( (int)$p_user_id, true ) );
+    while( $t_row = db_fetch_array( $t_result ) ) {
+        $t_project_name = string_attribute( $t_row['name'] );
+        $t_user_id = $t_row['id'];
+        echo '<option value="' . $t_user_id . '">' . $t_project_name . '</option>';
+    }
+}
+/**
  * List of projects with which the specified field id is linked.
  * For every project, the project name is listed and then the list of custom
  * fields linked in order with their sequence numbers.  The specified field
