@@ -366,7 +366,7 @@ if( $t_reset || $t_unlock || $t_delete || $t_impersonate ) {
                 <input type="hidden" name="user_id" value="<?php echo $t_user['id'] ?>" />
                 <tr>
                     <td class="category">
-                        <?php echo lang_get( 'assigned_projects_label' ) ?>
+                        <?php echo lang_get( 'select_mult_projects_label' ) ?>
                     </td>
                     <td>
                         <select id="add-user-project-id" name="mult_project_id[]" class="input-sm" multiple="multiple" size="5">

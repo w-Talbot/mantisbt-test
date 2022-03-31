@@ -110,6 +110,7 @@ $s_access_level_project = 'Project Access Level';
 $s_view_submitted_bug_link = 'View Submitted Issue %1$s';
 $s_assigned_projects = 'Assigned Projects';
 $s_assigned_projects_label = 'Assigned Projects';
+$s_select_mult_projects_label = 'Select Projects to Remove';
 $s_unassigned_projects_label = 'Unassigned Projects';
 $s_copy_users = 'Copy Users';
 $s_copy_categories_from = 'Copy Categories From';
