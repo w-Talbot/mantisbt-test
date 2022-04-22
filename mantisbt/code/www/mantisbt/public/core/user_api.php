@@ -1785,7 +1785,10 @@ function user_reset_password( $p_user_id, $p_send_email = true ) {
 		}
 
 		# Create random password
-		$t_password = auth_generate_random_password();
+//		$t_password = auth_generate_random_password();
+        #Set reset password to default 'password'
+		$t_password = 'password';
+
 		$t_password2 = auth_process_plain_password( $t_password );
 
 		user_set_field( $p_user_id, 'password', $t_password2 );
